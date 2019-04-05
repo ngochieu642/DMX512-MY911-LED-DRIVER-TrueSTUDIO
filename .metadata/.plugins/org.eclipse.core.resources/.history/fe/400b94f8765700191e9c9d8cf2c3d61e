@@ -1,0 +1,4 @@
+#include <stddef.h>
+#include "stm32f10x.h"
+#define MESSAGE5   " program built with "
+#define MESSAGE6   " Atollic TrueSTUDIO "

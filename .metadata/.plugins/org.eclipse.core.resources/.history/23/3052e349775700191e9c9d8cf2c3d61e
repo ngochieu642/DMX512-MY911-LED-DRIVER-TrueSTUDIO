@@ -1,0 +1,26 @@
+#include <stddef.h>
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "stm32f10x.h"
+#include "stm32f10x_gpio.h"
+#include "stm32f10x_tim.h"
+#include "stm32f10x_usart.h"
+#include "stm32f10x_dma.h"
+#include "softSPI_MY9221.h"
+
+#define MESSAGE5   " program built with "
+#define MESSAGE6   " Atollic TrueSTUDIO "
+#define PORT_LED 	GPIOA
+#define DI		GPIO_Pin_7
+#define DCKI	GPIO_Pin_5
+
+/*Systick*/
+typedef struct
+{
+	uint32_t Systick_Counter;
+}SysTick_typedef;
+extern SysTick_typedef systick;
+uint32_t System_GetTick(void);
